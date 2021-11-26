@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(203, 202, 211);
+}
+
+h1 {
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+h2 {
+    background-color: white;
+    margin: 10px ;
+    padding: 10px;
+    border-radius: 4px;;
+}
+
+li {
+    margin: 0 0 10px 0;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    margin: 8px 0 8px 8px;
+}
+
+button {
+    height: 35px;
+    width: 80px;
+    background-color: orange;
+    color: white;
+    border: none;
+}
+
+select {
+    width: 400px;
+    height: 30px;
+    margin: 8px 0 8px 8px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0 15px 0 10px;
+    vertical-align: bottom;
+}
+
+a {
+    padding: 0 0 0 20px;
+    font-weight: bold;
+}
+
+p {
+    padding: 0 0 0 5px;
+    font-size: large;
+    display: flex;
+    align-self: center;
+}
+
+.author {
+    padding: 0 0 0 20px;
+}
+
+.arrow {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    padding: 0 5px 0 0;
+}
+
+.thumbnail {
+    
+}

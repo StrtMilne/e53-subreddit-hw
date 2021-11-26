@@ -2,6 +2,9 @@ import React, {useState, useEffect} from "react";
 import ItemsList from "../components/ItemsList";
 import SelectReddit from "../components/SelectReddit";
 import SubredditForm from "./SubredditForm";
+import Graph from "../components/Graph";
+import "./style.css"
+
 
 const SubredditContainer = () => {
 
@@ -33,6 +36,7 @@ const SubredditContainer = () => {
             .then(res => res.json())
             .then(items => items.data.children)
             .then(array => sortByScore(array))
+            .then(array => array.slice(0, 10))
             .then(stories => setItems(stories));
     }
 
@@ -42,10 +46,11 @@ const SubredditContainer = () => {
 
     return(
         <>
-            <h1>Subreddit: {selectedSubreddit}</h1>
+            <h1><img src="http://svgur.com/i/2SL.svg"/>Subreddit: {selectedSubreddit}</h1>
             <SubredditForm addSubreddit={addSubreddit}/>
             <SelectReddit subreddits={subreddits} setSelectedSubreddit={setSelectedSubreddit}/>
-            <h2>Top stories</h2>
+            <h2>Top 10 stories</h2>
+            <Graph items={items}/>
             <ItemsList items={items}/>
         </>
     )
