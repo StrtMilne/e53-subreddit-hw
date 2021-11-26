@@ -1,9 +1,15 @@
 import React, {useState, useEffect} from "react";
 import ItemsList from "../components/ItemsList";
+import SubredditForm from "./SubredditForm";
 
 const SubredditContainer = () => {
 
     const [items, setItems] = useState([]);
+    const [subreddits, setSubreddits] = useState([]);
+
+    const addSubreddit = (subreddit) => {
+        setSubreddits([...subreddits, subreddit]);
+    }
 
     const sortByScore = function(array) {
         array.sort((firstElement, secondElement) => {
@@ -35,6 +41,7 @@ const SubredditContainer = () => {
     return(
         <>
             <h1>Subreddit: </h1>
+            <SubredditForm addSubreddit={addSubreddit}/>
             <ItemsList items={items}/>
         </>
     )
