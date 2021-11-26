@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = ({item, url}) => {
+const Item = ({item}) => {
     return(
         <li>
             <a href={item.data.url}>{item.data.title}</a>
