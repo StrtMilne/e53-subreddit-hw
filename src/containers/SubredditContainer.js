@@ -9,8 +9,8 @@ import "./style.css"
 const SubredditContainer = () => {
 
     const [items, setItems] = useState([]);
-    const [subreddits, setSubreddits] = useState(["announcements"]);
-    const [selectedSubreddit, setSelectedSubreddit] = useState("announcements")
+    const [subreddits, setSubreddits] = useState(["all", "pics"]);
+    const [selectedSubreddit, setSelectedSubreddit] = useState("all")
 
     const addSubreddit = (subreddit) => {
         setSubreddits([...subreddits, subreddit]);
@@ -46,7 +46,7 @@ const SubredditContainer = () => {
 
     return(
         <>
-            <h1><img src="http://svgur.com/i/2SL.svg"/>Subreddit: {selectedSubreddit}</h1>
+            <h1><img src="http://svgur.com/i/2SL.svg"/>Subreddit: r/{selectedSubreddit}</h1>
             <SubredditForm addSubreddit={addSubreddit}/>
             <SelectReddit subreddits={subreddits} setSelectedSubreddit={setSelectedSubreddit}/>
             <h2>Top 10 stories</h2>

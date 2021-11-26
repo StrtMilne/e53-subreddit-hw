@@ -20,19 +20,21 @@ const Graph = ({items}) => {
     }
 
     return(
-        <Chart
-            width={900}
-            height={'300px'}
-            chartType="BubbleChart"
-            data={arrayInfo()}
-            options={{
-            title:
-                'Stats: correlation between downvotes, comments and score for top 10',
-            hAxis: { title: 'Comments' },
-            vAxis: { title: 'Downvotes' },
-            bubble: { textStyle: { fontSize: 11 } },
-            }}
-        />
+        <div className="chart">
+            <Chart className="container"
+                width={"100%"}
+                height={'300px'}
+                chartType="BubbleChart"
+                data={arrayInfo()}
+                options={{
+                title:
+                    'Stats: correlation between downvotes, comments and score for top 10',
+                hAxis: { title: 'Comments' },
+                vAxis: { title: 'Downvotes' },
+                bubble: { textStyle: { fontSize: 11 } },
+                }}
+            />
+        </div>
     )    
 }
 

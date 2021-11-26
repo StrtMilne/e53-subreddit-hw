@@ -21,6 +21,11 @@ li {
     background-color: white;
     border-radius: 4px;
     display: flex;
+    transition: 1s;
+}
+
+li:hover {
+    background-color: rgb(179, 186, 255);
 }
 
 ul {
@@ -34,10 +39,12 @@ input {
     margin: 8px 0 8px 8px;
 }
 
+
+
 button {
     height: 35px;
     width: 80px;
-    background-color: orange;
+    background-color: RGBA(255, 86, 0, 1);
     color: white;
     border: none;
 }
@@ -58,7 +65,16 @@ img {
 
 a {
     padding: 0 0 0 20px;
+    margin: 5px 0 0 0;
     font-weight: bold;
+    font-size: 20px;
+}
+
+section {
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-start;
 }
 
 p {
@@ -70,6 +86,8 @@ p {
 
 .author {
     padding: 0 0 0 20px;
+    align-self: flex-start;
+    font-size: medium;
 }
 
 .arrow {
@@ -79,6 +97,23 @@ p {
     padding: 0 5px 0 0;
 }
 
-.thumbnail {
-    
+.chart {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 95%;
+}
+
+.glow {
+    text-shadow: 0 0 10px RGBA(255, 86, 0, 1);
+    padding: 30px 10px 30px 10px ;
+    min-width: 100px;
+    max-width: 150px;
+    margin: 0;
+    border: 0;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
 }
