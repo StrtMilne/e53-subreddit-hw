@@ -38,13 +38,14 @@ const SubredditContainer = () => {
 
     useEffect(() => {
         getItems();
-    }, [])
+    }, [selectedSubreddit])
 
     return(
         <>
-            <h1>Subreddit: </h1>
+            <h1>Subreddit: {selectedSubreddit}</h1>
             <SubredditForm addSubreddit={addSubreddit}/>
-            <SelectReddit subreddits={subreddits}/>
+            <SelectReddit subreddits={subreddits} setSelectedSubreddit={setSelectedSubreddit}/>
+            <h2>Top stories</h2>
             <ItemsList items={items}/>
         </>
     )

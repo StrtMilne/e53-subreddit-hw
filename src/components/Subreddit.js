@@ -1,5 +1,4 @@
 import React from "react";
-import SubredditForm from "../containers/SubredditForm";
 
 const Subreddit = (subreddit) => {
     return(

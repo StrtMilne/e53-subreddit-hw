@@ -1,14 +1,18 @@
 import React from "react";
 import Subreddit from "./Subreddit";
 
-const SelectReddit = ({subreddits}) => {
+const SelectReddit = ({subreddits, setSelectedSubreddit}) => {
 
     const opts = subreddits.map((subreddit, index) => {
             return <Subreddit subreddit={subreddit} key={index}/>
         })
 
+    const handleSelect = (event) => {
+        setSelectedSubreddit(event.target.value);
+    }
+
     return(
-        <select>
+        <select onChange={handleSelect}>
             <option defaultValue disabled>--Select a subreddit--</option>
             {opts}
         </select>
