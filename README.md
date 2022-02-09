@@ -1,4 +1,4 @@
-# A reddit client using their API. 
+# A front-end only reddit client using their API. 
 Add subreddits to your list and view the top ten stories at the time with some statistics displayed at the head of the page.
 
 ##### Header
